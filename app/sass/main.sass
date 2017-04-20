@@ -1,0 +1,538 @@
+@charset "UTF-8"
+
+body
+  font-family: 'Open Sans', sans-serif
+  position: relative
+  min-height: 100vh
+  #content
+    padding-bottom: 200px
+
+.red
+  color: #da0f35
+
+p, ul, ol, ul > li, ol > li
+  margin-bottom: 12px
+  line-height: 1.7em
+
+h1, h2
+  font-size: 26px
+  line-height: 1.4em
+  font-weight: 300
+  margin: 60px 0 50px
+
+h3
+  margin: 30px 0 20px
+  line-height: 1.4em
+
+a.collapse-link
+  border-bottom-style: dashed
+  border-bottom-width: 1px
+  &:hover, &:focus
+    text-decoration: none
+
+section:not(#main-first)
+  padding: 60px 0
+  &:first-of-type
+    padding-top: 150px
+
+.first-header
+  margin-top: 0
+
+header
+  position: absolute
+  top: 0
+  width: 100%
+  z-index: 2
+  &:not(#main)
+    background: #050d1f
+    .container
+      border-color: #050d1f
+  .navbar
+    margin-bottom: 0
+    background: transparent
+    border: none
+    -webkit-border-radius: 0
+    border-radius: 0
+    -webkit-box-shadow: none
+    box-shadow: none
+    .container
+      border-bottom: 1px solid #fff
+    .navbar-header >
+      span, a
+        display: inline-block
+        width: 150px
+        height: 36px
+        background: url(../img/logo.png)
+        background-size: 100%
+        margin-top: 27px
+        margin-bottom: 17px
+    .navbar-toggle
+      margin-top: 27px
+    .navbar-nav
+      float: right
+      ul.sub-menu
+        display: none
+        padding-left: 0
+        position: absolute
+        background-color: #050d1f
+        padding: 20px
+        top: 87px
+        left: 0
+        width: 350px
+        li
+          list-style-type: none
+          margin-bottom: 10px
+          &.active a
+            color: #46a2c8
+            text-decoration: underline
+      > li
+        margin-bottom: 0
+        position: relative
+        a
+          text-shadow: none
+          color: #fff
+          -webkit-transition: all 0.2s ease-in-out
+          transition: all 0.2s ease-in-out
+          &:hover
+            color: #46a2c8
+            border-color: #fff
+        &:hover ul.sub-menu
+          display: block
+        > a
+          text-transform: uppercase
+          padding: 37px 15px 28px
+          border-bottom: 2px solid transparent
+
+.button
+  padding: 30px 75px
+  font-size: 16px
+  -webkit-border-radius: 2px
+  border-radius: 2px
+  text-transform: uppercase
+  line-height: 1em
+  -webkit-transition: all 300ms ease
+  transition: all 300ms ease
+  font-weight: 600
+  background-color: #da0f35
+  display: inline-block
+  &:hover
+    opacity: 0.8
+
+a.button
+  color: #fff !important
+  text-decoration: none
+
+.form-group
+  margin-bottom: 35px
+
+.form-control
+  height: auto
+  padding: 18px
+  background: transparent
+  -webkit-border-radius: 3px
+  border-radius: 3px
+  border-color: #abb3c4
+  color: #e4e7eb
+
+section:not(#feedback) .form-control
+  color: #555
+
+.bg-danger
+  background-color: transparent
+
+textarea
+  max-height: 151px
+
+button
+  border: 0
+  outline: none
+  &.button
+    padding-left: 50px
+    padding-right: 50px
+    color: #fff
+
+a.button.services
+  padding: 15px 35px
+  margin: 10px 0 0
+  font-size: 14px
+
+#itsm p > img
+  margin-top: 20px
+
+section
+  &#main-first
+    position: relative
+    img
+      width: 100%
+    #main-first-content
+      top: 0
+      left: 0
+      position: absolute
+      width: 100%
+      color: #fff
+      display: -webkit-box
+      display: -webkit-flex
+      display: -ms-flexbox
+      display: flex
+      height: 100%
+      -webkit-box-align: center
+      -webkit-align-items: center
+      -ms-flex-align: center
+      align-items: center
+      h1
+        font-size: 72px
+        font-weight: 300
+        margin-bottom: 40px
+        text-transform: uppercase
+      h2
+        text-transform: uppercase
+        margin: 30px 0
+  &#our-clients
+    background-color: #2d3340
+    color: #fff
+    h2
+      background: url("../img/header-line.png") center no-repeat
+      span
+        background: #2d3340
+        padding: 0 30px
+        display: inline-block
+    .client-block
+      border: 1px solid #e4e7eb
+      -webkit-border-radius: 3px
+      border-radius: 3px
+      min-height: 370px
+      .client-pic
+        padding: 30px 0
+        background: #e4e7eb
+      .client-text
+        padding: 30px 40px
+  &#abilities
+    background-color: #e4e7eb
+    h2
+      background: url("../img/header-line-gray.png") center no-repeat
+      span
+        background: #e4e7eb
+        padding: 0 30px
+        display: inline-block
+    .sub-header
+      font-size: 18px
+      margin-bottom: 30px
+    ul > li
+      margin-bottom: 6px
+    .video img
+      cursor: pointer
+      opacity: 0.9
+      margin: 0 auto 12px
+      &:hover
+        opacity: 1
+  &#sn-clients
+    h2
+      background: url("../img/header-line-gray.png") center no-repeat
+      span
+        background: #fff
+        padding: 0 30px
+        display: inline-block
+    .carousel img
+      -webkit-filter: grayscale(100%)
+      filter: grayscale(100%)
+      -webkit-transition: all 0.2s ease-in-out
+      transition: all 0.2s ease-in-out
+      &:hover
+        -webkit-filter: none
+        filter: none
+
+@media (max-width: 981px)
+  section#main-first #main-first-content
+    h1
+      font-size: 36px
+      margin: 30px 0
+    .red
+      color: #da0f35
+
+.carousel
+  padding: 0 5%
+
+.owl-theme .owl-controls .owl-buttons div
+  height: 36px
+  width: 17px
+  opacity: 0.8
+  position: absolute
+  top: 50%
+  margin-top: -18px
+  background-repeat: no-repeat
+  background-color: transparent
+  &.owl-prev
+    background-image: url(../img/arrow-leftt-blue.png)
+    left: 0
+  &.owl-next
+    background-image: url(../img/arrow-right-blue.png)
+    right: 0
+  &:hover
+    opacity: 0.8
+
+section
+  &#advantages
+    background-color: #495362
+    color: #fff
+    h2
+      background: url("../img/header-line.png") center no-repeat
+      span
+        background: #495362
+        padding: 0 30px
+        display: inline-block
+    .row:not(:last-child) .advant-block
+      margin-bottom: 40px
+    p
+      &.header
+        text-transform: uppercase
+        display: -webkit-box
+        display: -webkit-flex
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-align: center
+        -webkit-align-items: center
+        -ms-flex-align: center
+        align-items: center
+        i
+          font-size: 26px
+          margin-right: 10px
+      &:not(.header)
+        color: #abb3c4
+  &#feedback
+    background: url(../img/form-back.jpg)
+    background-size: cover
+    color: #fff
+    h2 span
+      &:before, &:after
+        content: ""
+        background-image: url(../img/header-line.png)
+        background-repeat: no-repeat
+        height: 1px
+        width: 39%
+        display: inline-block
+        position: absolute
+        top: 20%
+      &:before
+        left: 0
+        background-position: center left
+      &:after
+        right: 0
+        background-position: center right
+    p.text-center
+      font-size: 16px
+
+footer
+  background-color: #050d1f
+  padding-bottom: 30px
+  position: absolute
+  bottom: 0
+  width: 100%
+  .row
+    padding: 35px 0 23px
+  .copyright
+    background: url(../img/header-line.png) bottom no-repeat
+    text-transform: uppercase
+    color: #fff
+  .contacts
+    font-size: 12px
+    a, span
+      padding-left: 25px
+      position: relative
+      color: #abb3c4
+      margin: 0 60px
+    a:before, span:before
+      content: ""
+      position: absolute
+      display: inline-block
+      width: 20px
+      height: 16px
+      left: 0
+      background: url("../img/footer-icons.png") no-repeat
+    a
+      &:hover
+        color: #fff
+      &.mail:before
+        background-position: -412px 1px
+      &.skype:before
+        background-position: -657px 0px
+    span.phone:before
+      background-position: -867px 0px
+
+.service-box
+  .service-icon, .service-content
+    display: inline-block
+    vertical-align: middle
+  .service-icon
+    margin-right: 1%
+    width: 40px
+    margin-bottom: 10px
+    text-align: center
+    height: 40px
+    background-size: cover
+    &#icon1
+      background-image: url(../img/services/icon1.png)
+    &#icon2
+      background-image: url(../img/services/icon2.png)
+    &#icon3
+      background-image: url(../img/services/icon3.png)
+    &#icon4
+      background-image: url(../img/services/icon4.png)
+    &#icon5
+      background-image: url(../img/services/icon5.png)
+  .service-content
+    width: 90%
+    padding-bottom: 7px
+
+.left-menu ul
+  padding-left: 5px
+  li
+    display: block
+    &.active a
+      color: #2a6496
+      text-decoration: underline
+
+#map-canvas
+  width: 100%
+  position: absolute
+  z-index: -1
+
+.container#map
+  position: relative
+  .contact-block
+    position: absolute
+    top: 200px
+    left: 0
+    background: rgba(0, 0, 0, 0.7)
+    padding: 30px 30px 20px
+    color: #fff
+    h2
+      margin-bottom: 20px
+    ul
+      padding-left: 0
+      li
+        display: block
+    h1
+      margin-bottom: 30px
+
+a.lightbox img
+  width: 200px
+
+.fixed-menu
+  position: fixed
+  top: 168px
+  right: 0
+  width: 53px
+  z-index: 10
+  a
+    display: block
+    cursor: pointer
+    color: #fff
+    text-align: center
+    &:hover
+      opacity: 0.8
+  .demo
+    background: #da0f35
+    text-transform: uppercase
+    line-height: 14px
+    padding: 25px 0
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+    font-size: 12px
+    &:hover
+      text-decoration: none
+  .contact
+    font-size: 2em
+    background-color: #000
+    padding: 12px 0
+
+a.back-to-top
+  position: fixed
+  bottom: 18px
+  right: 15px
+  display: block
+  text-decoration: none !important
+  &:hover
+    opacity: 0.8
+  i.fa
+    display: block
+    width: 36px
+    height: 36px
+    line-height: 36px
+    color: #fff
+    -webkit-border-radius: 2px
+    border-radius: 2px
+    text-align: center
+    background-color: #444
+    -webkit-transition: all 0.2s ease-in-out
+    transition: all 0.2s ease-in-out
+
+.toggle-mnu
+  float: right
+  margin-top: 35px
+
+nav.navbar div.hidden-lg
+  background: #050d1f
+  border-top: 1px solid #fff
+  .mobile-nav
+    display: none
+
+.nav.mobile-nav
+  > li > a
+    font-size: 16px
+    &:focus, &:hover
+      background-color: transparent
+      color: #fff
+  margin-top: 10px
+  ul
+    padding-left: 40px
+  li
+    list-style-type: none
+
+.success-form-back
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.5)
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 10000
+  display: none
+
+.success-form-info
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 350px
+  height: 80px
+  background: #fff
+  padding: 18px 20px 20px
+  margin-left: -150px
+  border-radius: 3px
+  margin-top: -50px
+
+.success-form-close
+  position: absolute
+  width: 20px
+  height: 20px
+  top: 10px
+  right: 10px
+  cursor: pointer
+  &:before, &:after
+    content: ""
+    width: 100%
+    height: 2px
+    background-color: #333
+    -webkit-border-radius: 2px
+    border-radius: 2px
+    display: block
+  &:hover
+    &:before, &:after
+      background-color: #777
+  &:before
+    -webkit-transform: rotate(45deg) translate(4px, 5px)
+    -ms-transform: rotate(45deg) translate(4px, 5px)
+    transform: rotate(45deg) translate(4px, 5px)
+  &:after
+    -webkit-transform: rotate(-45deg) translate(-4px, 2px)
+    -ms-transform: rotate(-45deg) translate(-4px, 2px)
+    transform: rotate(-45deg) translate(-4px, 2px)

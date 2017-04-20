@@ -1,0 +1,24 @@
+mixin clientsCarousel(client)
+    .client-item.item.text-center
+        img(src=client[0], title=client[1], alt=client[1])
+
+section#sn-clients
+    .container
+        .row
+          .col-xs-12.col-sm-12.col-md-12.col-lg-12  
+            h2.first-header.text-center
+                span На текущий момент у компании 
+                    strong ServiceNow
+                    br
+                    | 2600 корпоративных клиентов среди которых:
+            #sn-clients-carousel.carousel
+                +clientsCarousel(['/img/sn-clients/c1.png', ''])
+                +clientsCarousel(['/img/sn-clients/c2.png', ''])
+                +clientsCarousel(['/img/sn-clients/c3.png', ''])
+                +clientsCarousel(['/img/sn-clients/c4.png', ''])
+                +clientsCarousel(['/img/sn-clients/c5.png', ''])
+                +clientsCarousel(['/img/sn-clients/c6.png', ''])
+                +clientsCarousel(['/img/sn-clients/c7.png', ''])
+                +clientsCarousel(['/img/sn-clients/c8.png', ''])
+                +clientsCarousel(['/img/sn-clients/c9.png', ''])
+                +clientsCarousel(['/img/sn-clients/c10.png'], '')

@@ -1,0 +1,119 @@
+mixin header(href)
+	nav.navbar.navbar-default(role="navigation")
+		.container
+			.row
+				.col-xs-3.col-sm-3.col-md-3.col-lg-3
+					.navbar-header
+						if href != ''
+							a(href="#{href}")
+						else
+							span
+
+				.col-xs-7.col-sm-7.col-md-7.col-lg-7
+					a(href="#", class="toggle-mnu hidden-lg hidden-md")
+						span
+					ul.nav.navbar-nav.hidden-xs.hidden-sm
+						li
+							a(href="/services/") Услуги
+							ul.sub-menu
+								li
+									a.help(href="/services/helpdesk.html") Внедрение службы Helpdesk
+								li
+									a.sd(href="/services/servicedesk.html") Внедрение службы Service Desk
+								li
+									a.itsm(href="/services/itsm.html") Управление ИТ-процессами (ITSM)
+								li
+									a.itam(href="/services/itam.html") Управление Активами (ITAM)
+								li
+									a.itom(href="/services/itom.html") Управление ЦОД (ITOM)
+								li
+									a.itfm(href="/services/itfm.html") Управление финансами в IT (ITFM)
+								li
+									a.sdlc(href="/services/sdlc.html") Управление разработкой ПО (SDLC)
+								li
+									a.ppm(href="/services/ppm.html") Управление портфелями проектов (PPM)
+								li
+									a.fsm(href="/services/fsm.html") Управление эксплуатацией (FSM)
+								li
+									a.hrsm(href="/services/hrsm.html") Управление HR (HRSM)
+								li
+									a.sportal(href="/services/sportal.html") Построение корпоративного портала самообслуживания
+						li
+							a(href="/demo/") Демо
+						li
+							a(href="/company/") О компании
+						li
+							a(href="http://blog.it-guild.com/") Блог
+						li
+							a(href="/contacts/") Контакты
+						li
+							a(href="/clients/") Клиенты
+
+				.col-xs-2.col-sm-2.col-md-2.col-lg-2
+					.lang-switcher
+						span.ru
+						span.en
+
+				.col-xs-12.col-sm-12.col-md-12.col-lg-12.hidden-lg.hidden-md
+					ul.nav.mobile-nav
+						li
+							a(href="/services/") Услуги
+							ul.sub-menu
+								li
+									a.help(href="/services/helpdesk.html") Внедрение службы Helpdesk
+								li
+									a.sd(href="/services/servicedesk.html") Внедрение службы Service Desk
+								li
+									a.itsm(href="/services/itsm.html") Управление ИТ-процессами (ITSM)
+								li
+									a.itam(href="/services/itam.html") Управление Активами (ITAM)
+								li
+									a.itom(href="/services/itom.html") Управление ЦОД (ITOM)
+								li
+									a.itfm(href="/services/itfm.html") Управление финансами в IT (ITFM)
+								li
+									a.sdlc(href="/services/sdlc.html") Управление разработкой ПО (SDLC)
+								li
+									a.ppm(href="/services/ppm.html") Управление портфелями проектов (PPM)
+								li
+									a.fsm(href="/services/fsm.html") Управление эксплуатацией (FSM)
+								li
+									a.hrsm(href="/services/hrsm.html") Управление HR (HRSM)
+								li
+									a.sportal(href="/services/sportal.html") Построение корпоративного портала самообслуживания
+						li
+							a(href="/demo/") Демо
+						li
+							a(href="/company/") О компании
+						li
+							a(href="http://blog.it-guild.com/") Блог
+						li
+							a(href="/contacts/") Контакты
+						li
+							a(href="/clients/") Клиенты
+
+mixin list(...items)
+	ul
+		each item in items
+			li!= item
+
+mixin video(img, link)
+	img.img-responsive(src=img, title=link)
+
+mixin leftMenu()
+	.left-menu
+		h3.first-header Другие услуги
+		+list(
+			'<a class="help" href="helpdesk.html">Внедрение службы Helpdesk</a>',
+			'<a class="sd" href="servicedesk.html">Внедрение службы Service Desk</a>',
+			'<a class="itsm" href="itsm.html">Управление ИТ-процессами (ITSM)</a>',
+			'<a class="itam" href="itam.html">Управление Активами (ITAM)</a>',
+			'<a class="itom" href="itom.html">Управление ЦОД (ITOM)</a>',
+			'<a class="itfm" href="itfm.html">Управление финансами в IT (ITFM)</a>',
+			'<a class="sdlc" href="sdlc.html">Управление разработкой ПО (SDLC)</a>',
+			'<a class="ppm" href="ppm.html">Управление портфелями проектов (PPM)</a>',
+			'<a class="fsm" href="fsm.html">Управление эксплуатацией (FSM)</a>',
+			'<a class="hrsm" href="hrsm.html">Управление HR (HRSM)</a>',
+			'<a class="sportal" href="sportal.html">Построение корпоративного портала самообслуживания</a>'
+		)
+		

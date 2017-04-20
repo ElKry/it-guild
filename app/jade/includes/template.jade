@@ -1,0 +1,92 @@
+include mixins
+
+doctype html
+html(lang='ru')
+	head
+		meta(carsrt='utf-8')
+		meta(name="yandex-verification" content="be9b02adeb819829")
+		meta(name="google-site-verification" content="lXOb2U64VpR4rCuKL3Vk1KOdSdPH_bdzmbwXHIZDf1M")
+		block description
+		block keywords
+		block title
+		link(rel="shortcut icon" href="/img/favicon.png" type="image/png")
+		link(rel="stylesheet", href="/css/libs.css")
+		link(rel="stylesheet", href="/css/main.css")
+		script(src="/js/libs.min.js")
+
+	body
+		//Yandex.Metrika counter
+		script.
+			(function (d, w, c) {
+			    (w[c] = w[c] || []).push(function() {
+			        try {
+			            w.yaCounter24122596 = new Ya.Metrika({
+			                id:24122596,
+			                clickmap:true,
+			                trackLinks:true,
+			                accurateTrackBounce:true,
+			                webvisor:true
+			            });
+			        } catch(e) { }
+			    });
+			    var n = d.getElementsByTagName("script")[0],
+			        s = d.createElement("script"),
+			        f = function () { n.parentNode.insertBefore(s, n); };
+			    s.type = "text/javascript";
+			    s.async = true;
+			    s.src = "https://mc.yandex.ru/metrika/watch.js";
+			    if (w.opera == "[object Opera]") {
+			        d.addEventListener("DOMContentLoaded", f, false);
+			    } else { f(); }
+			})(document, window, "yandex_metrika_callbacks");
+
+		noscript
+			div
+				img(src="https://mc.yandex.ru/watch/24122596", style="position:absolute; left:-9999px;", alt="")
+		//Yandex.Metrika counter
+
+		//Google Analitics
+		!= "<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-84017349-1', 'auto'); ga('send', 'pageview');</script>"
+		//Google Analitics
+
+
+		#content
+			block header
+
+			block content
+
+		footer.text-center
+			.container
+				.copyright.row
+					.col-xs-12.col-sm-12.col-md-12.col-lg-12
+						p © 2013 - 2017 «ИТ ГИЛЬДИЯ»
+				.contacts.row
+					.col-xs-12.col-sm-12.col-md-6.col-lg-6
+						p
+							a.adress(href="https://goo.gl/maps/bic1O") 115088,&nbsp;г.&nbsp;Москва,&nbsp;ул.&nbsp;Южнопортовая,&nbsp;д.5,&nbsp;стр.1
+							a.mail(href="mailto:info@it-guild.com") info@it-guild.com				
+					.col-xs-12.col-sm-12.col-md-6.col-lg-6
+						p
+							a.skype(href="skype:it-guild.com") it-guild.com
+							span.phone +7 (499) 652-70-33
+
+		.success-form-back
+			.success-form-info
+				p Спасибо! Ваш запрос принят.
+					br 
+					| Мы свяжемся с Вами в ближайшее время.
+				.success-form-close
+
+		.fixed-menu
+			a.demo(href="/demo/", target="_blank")
+				strong Демо
+			a.contact(href="/contacts/")
+				i.fa.fa-phone
+
+		a.back-to-top(href="#content")
+			i.fa.fa-angle-up
+
+		script(src="/js/common.js")
+		script(src="/js/contact.js")
+		block js
+

@@ -1,0 +1,62 @@
+mixin serviceBox(icon, text)
+	.col-xs-12.col-sm-12.col-md-12.col-lg-12.service-box
+		.service-icon(id = icon)
+		.service-content
+			p #{text}
+
+extends ../includes/template
+
+block description
+	meta(name="description" content="Компания «ИТ Гильдия» специализируется на внедрении, администрировании, техническом сопровождении многофункциональной платформы ServiceNow")
+
+block title
+	title Портфель услуг по внедрению ServiceNow | «ИТ Гильдия» – первый российский интегратор SaaS-решения ServiceNow
+
+block header
+	header
+		+header('/')
+
+block content
+	section.content
+		.container
+			.row
+				.col-xs-12.col-sm-12.col-md-12.col-lg-12
+					h1.first-header.text-center
+						strong Портфель услуг «ИТ Гильдии»
+				
+					p
+						|Компания «ИТ Гильдия» специализируется на внедрении, администрировании, техническом сопровождении 			многофункциональной 	платформы ServiceNow, распространяемой преимущественно по модели SaaS (Software as a Service). 			Система ServiceNow 	позволяет автоматизировать ITSM и другие трекинговые процессы для средних и крупных компаний.
+					br
+					p «ИТ Гильдия» предлагает готовый продукт, который «из коробки» автоматизирует:
+				
+					+list(
+						'<a class="itsm" href="helpdesk.html">Helpdesk</a>',
+						'<a class="itsm" href="servicedesk.html">Service Desk</a>',
+						'<a href="itsm.html">Управление ИТ-процессами (ITSM)</a>',
+						'<a href="itam.html">Управление Активами (ITAM)</a>',
+						'<a href="itom.html">Управление ЦОД (ITOM)</a>',
+						'<a href="itfm.html">Управление финансами в IT (ITFM)</a>',
+						'<a href="sdlc.html">Управление разработкой ПО (SDLC)</a>',
+						'<a href="ppm.html">Управление портфелями проектов (PPM)</a>',
+						'<a href="fsm.html">Управление эксплуатацией (FSM)</a>',
+						'<a href="hrsm.html">Управление HR (HRSM)</a>',
+						'<a href="sportal.html">Построение корпоративного портала самообслуживания</a>'
+					)
+					br
+					p
+						|Обладая партнерским статусом MSP (Managed Service Provider), «ИТ Гильдия» предоставляет ServiceNow из отечественного российского облака, размещенного в сертифицированном дата-центре уровня Tier III в рамках следующих услуг:	
+
+				+serviceBox('icon1', 'Внедрение систем ServiceNow по управлению процессами ITIL')
+				+serviceBox('icon2', 'Автоматизация ИТ-процессов в соответствии с ITSM')
+				+serviceBox('icon3', 'Администрирование платформы ServiceNow')
+				+serviceBox('icon4', 'Техническое сопровождение систем ServiceNow')
+				+serviceBox('icon5', 'Разработка на платформе ServiceNow')
+
+	section#feedback
+		.container
+			.row
+				.col-xs-12.col-sm-12.col-md-12.col-lg-12     
+					h2.first-header.text-center
+						span Узнайте больше
+			.row
+				include ../includes/feedback-form

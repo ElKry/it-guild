@@ -1,0 +1,24 @@
+extends ../includes/template
+
+block description
+	meta(name="description" content="Заполнить форму на получение демо-доступа к ServiseNow.")
+
+block title
+	title Демо доступ к ServiceNow | «ИТ Гильдия» – первый российский интегратор SaaS-решения ServiceNow
+
+block header
+	header
+		+header('/')
+
+block content
+	section.content
+		.container
+			.row(style="margin-bottom: 30px;")
+				.col-xs-12.col-sm-12.col-md-12.col-lg-12
+					h1.first-header.text-center Демо доступ к 
+						strong ServiceNow
+					p Для детального знакомства с платформой ServiceNow предлагаем изучить ее русскоязычный демонстрационный стенд. Тестовая среда содержит типовое наполнение, которое позволит в полной мере определить применимость платформы для вашей организации.
+					p В случае возникновения вопросов консультанты «ИТ Гильдии» всегда готовы ответить на них и помочь разобраться в основных принципах работы.
+
+			.row
+				include ../includes/feedback-form

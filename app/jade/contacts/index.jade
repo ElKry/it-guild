@@ -1,0 +1,48 @@
+extends ../includes/template
+
+block description
+	meta(name="description" content="Связаться с компанией «ИТ Гильдия». Телефон: +7 (499) 652-70-33. Email: info@it-guild.com. Skype: it-guild.com. Адрес: 115088, г. Москва, ул. Южнопортовая, д.5, стр.1")
+
+block title
+	title Контакты - ИТ Гильдия
+
+block header
+	header
+		+header('/')
+
+block content
+
+	#map-canvas
+
+	.container#map
+		.contact-block
+			h1.first-header Контактая информация
+			ul
+				li
+					i.fa.fa-check-circle
+					strong &nbsp;Телефон:&nbsp;
+					|+7 (499) 652-70-33
+				li
+					i.fa.fa-check-circle
+					strong &nbsp;Skype:&nbsp;
+					a(href="skype:it-guild.com") it-guild.com
+				li
+					i.fa.fa-check-circle
+					strong &nbsp;Email:&nbsp;
+					a(href="mailto:info@it-guild.com") info@it-guild.com
+				li
+					i.fa.fa-check-circle
+					strong &nbsp;Адрес:&nbsp;
+					|115088, г. Москва, ул. Южнопортовая, д.5, стр.1
+				li
+					i.fa.fa-check-circle
+					strong &nbsp;ИНН:&nbsp;
+					|7723883110
+				li
+					i.fa.fa-check-circle
+					strong &nbsp;ОГРН:&nbsp;
+					|1137746832475
+
+block js
+	script(src="http://maps.googleapis.com/maps/api/js?sensor=false")
+	script(src="../js/map.js")

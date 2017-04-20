@@ -1,0 +1,21 @@
+mixin client(client)
+	.col-xs-12.col-sm-12.col-md-4.col-lg-4
+		.client-block
+			.client-pic
+				img(src=client[0], title=client[1], alt=client[1])
+			.client-text
+				p #{client[2]}
+
+section#our-clients.text-center
+	.container
+		.row
+			.col-xs-12.col-sm-12.col-md-12.col-lg-12
+				h2.first-header.text-center
+					span Наши клиенты
+					
+			+client(['img/sochi-autodrom.png', 'Sochi Autodrom', 'Сочи Автодром работает в круглогодичном режиме, и его современная инфраструктура позволяет соблюдать все необходимые требования безопасности при организации автомобильных соревнований.'])
+
+			+client(['img/kaspersky.png', 'Kaspersky Lab', '«Лаборатория Касперского» — одна из наиболее динамично развивающихся компаний в сфере информационной безопасности.'])
+
+			+client(['img/rossiya-logo.png', 'Авиакомпания Россия', 'Компания ведёт свою историю с 1934 года. Являясь правопреемником авиапредприятия «Пулково», она сохранила богатые традиции петербургской авиации.'])
+

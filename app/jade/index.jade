@@ -1,0 +1,44 @@
+extends includes/template
+
+block description
+  meta(name="description" content="Услуги в области автоматизации бизнес-процессов на базе SaaS-платформы ServiceNow. Автоматизация ИТ-процессов. ITIL. Контакты +7 (499) 652-70-33 info@it-guild.com")
+
+block keywords
+  meta(name="keywords" content="Servicenow, автоматизация бизнес-процессов, itsm система, внедрение servicenow, saas itsm система, itil, управление servicedesk")
+
+block title
+  title «ИТ Гильдия» – внедрение ServiceNow
+
+block header
+  header#main
+    +header('')
+          
+block content
+  section#main-first
+    img.img-responsive(src="../img/background-main.jpg", alt="ServiceNow")
+    #main-first-content
+      .container
+        .row
+         .col-xs-12.col-sm-12.col-md-12.col-lg-12.text-center
+          h1.first-header
+            |Service
+            span.red Now
+          h2 Автоматизация вашего бизнеса
+          a.button(href="#abilities") Узнать больше
+
+  include includes/main/our-clients
+
+  include includes/main/abilities
+
+  include includes/main/sn-clients
+
+  include includes/main/advantages
+
+  section#feedback
+    .container
+        .row
+          .col-xs-12.col-sm-12.col-md-12.col-lg-12     
+            h2.first-header.text-center
+              span Узнайте больше
+        .row
+          include includes/feedback-form

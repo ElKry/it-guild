@@ -1,0 +1,36 @@
+.row
+	.col-xs-12.col-sm-12.col-md-12.col-lg-12
+		p.text-center Пожалуйста, заполните данную форму и наши менеджеры свяжутся с Вами!
+
+form(role="form")
+	.col-xs-12.col-sm-12.col-md-12.col-lg-12
+		.form-group
+			div#success
+
+	.col-xs-6.col-sm-6.col-md-4.col-lg-4
+		.form-group
+			input(class='form-control require', type='text', name='name', id='name', placeholder='ФИО*')
+		.form-group
+			input(class='form-control require', type='text', name='phone', id='phone', placeholder='Телефон*')
+		.form-group
+			input(class='form-control require', type='text', name='email', id='email', placeholder='E-mail*')
+
+	.col-xs-6.col-sm-6.col-md-4.col-lg-4
+		.form-group
+			input(class='form-control', type='text', name='city', id='city', placeholder='Город')
+		.form-group
+			input(class='form-control require', type='text', name='company', id='company', placeholder='Компания*')
+		.form-group
+			input(class='form-control', type='text', name='post', id='post', placeholder='Должность')
+
+	.col-xs-12.col-sm-12.col-md-4.col-lg-4
+		.form-group
+			input(class='form-control', type='text', name='users', id='users', placeholder='Сколько пользователей в вашей компании')
+		.form-group
+			textarea(class='form-control', name='comment', id='comment', rows='7', placeholder='Комментарий')
+		.form-group
+			input(class='form-control', type='text', name='refer', id='refer', placeholder='', style='display: none;')
+
+	.col-xs-12.col-sm-12.col-md-12.col-lg-12
+		.form-group.text-center
+			button(type='submit' class='button') Заказать обратный звонок
